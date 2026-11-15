@@ -42,19 +42,20 @@ A Chrome extension for **FanFiction.Net** that helps readers organise their read
 5. Save lines you like in **Favourite Quotes** and search or copy them later.
 6. Toggle **Dark Mode** to change the extension's appearance.
 
-## Screenshots
+
+## 📸 Screenshots
 
 ### Extension Home
-![FanFiction Companion Home](screenshots/home.png)
+![FanFiction Companion Home](Screenshots/home.png)
 
 ### My Library
-![My Library](screenshots/library.png)
+![My Library](Screenshots/library.png)
 
 ### My Notes
-![My Notes](screenshots/notes.png)
+![My Notes](Screenshots/notes.png)
 
 ### Favourite Quotes
-![Favourite Quotes](screenshots/favourite-quotes.png)
+![Favourite Quotes](Screenshots/favourite-quotes.png)
 
 ## Data and Privacy
 
