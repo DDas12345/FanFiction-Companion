@@ -42,6 +42,20 @@ A Chrome extension for **FanFiction.Net** that helps readers organise their read
 5. Save lines you like in **Favourite Quotes** and search or copy them later.
 6. Toggle **Dark Mode** to change the extension's appearance.
 
+## Screenshots
+
+### Extension Home
+![FanFiction Companion Home](screenshots/home.png)
+
+### My Library
+![My Library](screenshots/library.png)
+
+### My Notes
+![My Notes](screenshots/notes.png)
+
+### Favourite Quotes
+![Favourite Quotes](screenshots/favourite-quotes.png)
+
 ## Data and Privacy
 
 The extension stores its library, notes, and favourite quotes locally using Chrome storage. The project documentation does not claim cloud synchronisation or a remote backend. Data stored with `chrome.storage.local` belongs to the browser profile where the extension is installed.
