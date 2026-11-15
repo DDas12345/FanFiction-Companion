@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FanFiction Companion</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+
+<body>
+
+    <main class="popup-container">
+
+        <header class="popup-header">
+            <img src="icons/icon48.png" alt="FanFiction Companion">
+            <div>
+                <h1>FanFiction Companion</h1>
+                <p>Your personal reading companion</p>
+            </div>
+        </header>
+
+        <section class="current-story">
+            <span class="section-label">CURRENT STORY</span>
+            <h2 id="current-story-title">No story detected</h2>
+            <p id="current-story-author">Open a FanFiction.Net story</p>
+        </section>
+
+        <section class="main-actions">
+            <button id="save-story" class="action-button">
+                🔖 Save Story
+            </button>
+
+            <button id="open-library" class="action-button">
+                📚 My Library
+            </button>
+
+            <button id="open-notes" class="action-button">
+                📝 My Notes
+            </button>
+
+            <button id="open-quotes" class="action-button">
+                💬 Favourite Quotes
+            </button>
+        </section>
+
+        <section class="appearance">
+            <span>🌙 Reading appearance</span>
+            <button id="theme-toggle">Dark Mode</button>
+        </section>
+
+        <section id="feature-view">
+            <p id="popup-message">
+                Welcome to your personal reading space!
+            </p>
+        </section>
+
+        <footer>
+            <span>Made for readers, with 💜</span>
+            <span>Version 1.0.0</span>
+        </footer>
+
+    </main>
+
+    <script src="popup.js"></script>
+</body>
+
+</html>

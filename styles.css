@@ -1,0 +1,393 @@
+#fanfiction-companion-toolbar {
+  position: fixed;
+  right: 20px;
+  bottom: 45px;
+  z-index: 999999;
+  box-sizing: border-box;
+  width: 280px;
+  max-width: calc(100vw - 32px);
+  max-height: calc(100vh - 60px);
+  overflow-y: auto;
+  padding: 14px;
+  border: 1px solid #665275;
+  border-radius: 14px;
+  background: #30243d;
+  color: #ffffff;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.3);
+}
+
+#fanfiction-companion-toolbar * {
+  box-sizing: border-box;
+}
+
+.ffc-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  font-weight: bold;
+  line-height: 1.4;
+}
+
+#fanfiction-companion-toolbar button {
+  padding: 9px 10px;
+  border: 0;
+  border-radius: 7px;
+  cursor: pointer;
+  font-family: Arial, sans-serif;
+  font-size: 13px;
+}
+
+#fanfiction-companion-toolbar button:focus-visible,
+#fanfiction-companion-toolbar a:focus-visible,
+#fanfiction-companion-toolbar select:focus-visible,
+#fanfiction-companion-toolbar textarea:focus-visible {
+  outline: 2px solid #d7b9ff;
+  outline-offset: 2px;
+}
+
+#ffc-toggle {
+  flex-shrink: 0;
+  background: #554565;
+  color: #ffffff;
+}
+
+#ffc-panel {
+  display: grid;
+  gap: 9px;
+  margin-top: 14px;
+}
+
+#ffc-panel[hidden] {
+  display: none;
+}
+
+#ffc-panel > button {
+  width: 100%;
+  background: #f5e9d5;
+  color: #30243d;
+  text-align: left;
+}
+
+#ffc-panel > button:hover,
+#ffc-notes-save:hover,
+.ffc-story-card button:hover {
+  background: #e8d4b6;
+}
+
+#ffc-message {
+  margin: 4px 0 0;
+  color: #eee2f5;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+
+#ffc-library-list {
+  display: grid;
+  gap: 10px;
+  margin-top: 8px;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+#ffc-library-list h3,
+#ffc-notes-box h3 {
+  margin: 0;
+  color: #ffffff;
+  font-size: 15px;
+}
+
+#ffc-library-list > p {
+  margin: 0;
+  color: #eee2f5;
+  line-height: 1.5;
+}
+
+.ffc-story-card {
+  display: grid;
+  gap: 8px;
+  padding: 10px;
+  border-radius: 8px;
+  background: #463650;
+  overflow-wrap: anywhere;
+}
+
+.ffc-story-card p {
+  margin: 0;
+  color: #eee2f5;
+  line-height: 1.4;
+}
+
+.ffc-story-card .ffc-story-title {
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.ffc-story-card select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #b8a5c5;
+  border-radius: 6px;
+  background: #ffffff;
+  color: #30243d;
+  font-size: 13px;
+}
+
+.ffc-story-card a {
+  color: #f5e9d5;
+  text-decoration: underline;
+}
+
+.ffc-story-card button {
+  background: #f5e9d5;
+  color: #30243d;
+}
+
+#ffc-notes-box {
+  display: grid;
+  gap: 10px;
+  margin-top: 8px;
+  padding: 12px;
+  border: 1px solid #665275;
+  border-radius: 10px;
+  background: #463650;
+}
+
+#ffc-notes-story {
+  margin: 0;
+  color: #eee2f5;
+  font-size: 12px;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+
+#ffc-notes-text {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  padding: 10px;
+  border: 1px solid #b8a5c5;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #30243d;
+  font-family: Arial, sans-serif;
+  font-size: 13px;
+  line-height: 1.5;
+  resize: vertical;
+}
+
+#ffc-notes-text:disabled {
+  opacity: 0.65;
+}
+
+#ffc-notes-save {
+  width: 100%;
+  background: #f5e9d5;
+  color: #30243d;
+}
+
+/* Basic page dark mode; the companion panel keeps its own colours. */
+body.ffc-dark-mode {
+  background-color: #1e1b24 !important;
+  color: #f3edf8 !important;
+}
+
+body.ffc-dark-mode #content,
+body.ffc-dark-mode #main,
+body.ffc-dark-mode .storytext {
+  background-color: #1e1b24 !important;
+  color: #f3edf8 !important;
+}
+/* Allow selecting text in the FanFiction.Net story reader */
+#storytextp,
+#storytext {
+  -webkit-user-select: text !important;
+  user-select: text !important;
+}
+
+/* Make story links easier to see in the toolbar */
+#fanfiction-companion-toolbar a {
+  color: #ffe0a3;
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+#fanfiction-companion-toolbar a:hover {
+  color: #fff0cf;
+}
+
+/* Favourite Quotes panel */
+#ffc-quotes-panel {
+  display: grid;
+  gap: 10px;
+  margin-top: 8px;
+  padding: 12px;
+  border: 1px solid #665275;
+  border-radius: 10px;
+  background: #463650;
+  color: #eee2f5;
+  min-width: 0;
+}
+
+#ffc-quotes-panel h3 {
+  margin: 0;
+  color: #ffffff;
+  font-size: 17px;
+  line-height: 1.4;
+  overflow-wrap: anywhere;
+}
+
+#ffc-quotes-panel p {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+
+#ffc-quotes-panel input[type="search"] {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  padding: 9px;
+  border: 1px solid #b8a5c5;
+  border-radius: 6px;
+  background: #ffffff;
+  color: #30243d;
+  font-family: Arial, sans-serif;
+  font-size: 13px;
+}
+
+#ffc-quotes-panel > button,
+.ffc-quote-card button {
+  width: 100%;
+  max-width: 100%;
+  padding: 9px 10px;
+  background: #f5e9d5;
+  color: #30243d;
+  text-align: center;
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+
+#ffc-quotes-panel > div {
+  min-width: 0;
+}
+
+#ffc-quotes-panel > div > p {
+  margin-bottom: 8px;
+}
+
+.ffc-quote-card {
+  display: grid;
+  gap: 8px;
+  min-width: 0;
+  padding: 10px;
+  border: 1px solid #665275;
+  border-radius: 8px;
+  background: #30243d;
+  color: #eee2f5;
+}
+
+.ffc-quote-card p:first-child {
+  color: #ffffff;
+  font-size: 14px;
+}
+
+.ffc-quote-card a {
+  display: block;
+  overflow-wrap: anywhere;
+}
+
+#ffc-quotes-panel button:hover {
+  background: #e8d4b6;
+}
+
+#ffc-quotes-panel button:focus-visible {
+  outline: 2px solid #d7b9ff;
+  outline-offset: 2px;
+}
+
+/* Compact toolbar layout */
+#fanfiction-companion-toolbar {
+  width: 320px;
+  max-width: calc(100vw - 24px);
+  max-height: 78vh;
+  bottom: 16px;
+  padding: 12px;
+  border-radius: 12px;
+}
+
+#fanfiction-companion-toolbar .ffc-header {
+  font-size: 15px;
+}
+
+#ffc-panel {
+  gap: 7px;
+  margin-top: 10px;
+}
+
+#ffc-panel > button {
+  padding: 8px 10px;
+  font-size: 13px;
+}
+
+#ffc-message {
+  font-size: 12px;
+}
+
+#ffc-library-list,
+#ffc-notes-panel,
+#ffc-quotes-panel {
+  min-width: 0;
+  max-width: 100%;
+}
+
+#ffc-library-list {
+  max-height: 250px;
+  overflow-y: auto;
+}
+
+#ffc-library-list h3,
+#ffc-notes-panel h3,
+#ffc-quotes-panel h3 {
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+#ffc-library-list input,
+#ffc-notes-panel textarea,
+#ffc-quotes-panel input {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+}
+
+#ffc-quotes-panel {
+  max-height: 42vh;
+  overflow-y: auto;
+}
+
+.ffc-quote-card {
+  gap: 7px;
+  padding: 9px;
+}
+
+/* FanFiction Companion logo */
+.ffc-brand {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  min-width: 0;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.ffc-brand img {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+  border-radius: 6px;
+  flex-shrink: 0;
+}
