@@ -46,16 +46,16 @@ A Chrome extension for **FanFiction.Net** that helps readers organise their read
 ## 📸 Screenshots
 
 ### Extension Home
-![FanFiction Companion Home](Screenshots/home.png)
+![FanFiction Companion Home](screenshots/home.png)
 
 ### My Library
-![My Library](Screenshots/library.png)
+![My Library](screenshots/library.png)
 
 ### My Notes
-![My Notes](Screenshots/notes.png)
+![My Notes](screenshots/notes.png)
 
 ### Favourite Quotes
-![Favourite Quotes](Screenshots/favourite-quotes.png)
+![Favourite Quotes](screenshots/favourite-quotes.png)
 
 ## Data and Privacy
 
